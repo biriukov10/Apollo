@@ -2,6 +2,10 @@
   font-size: $fSize;
   line-height: $lineH;
 }
+@mixin fondH {
+  font-size: $fSizeH;
+  line-height: $lineH + 5px;
+}
 
 @mixin burgerBtn {
   width: 21px;
@@ -28,7 +32,7 @@
   background-color: #9ca7a7; 
   transform: translateY(0);
   z-index: 5;
-  transition: transform .4s;
+  transition: $transit;
 }
 
 @mixin baListMenu {
@@ -38,9 +42,82 @@
 }
 
 @mixin baItemMenu {
-  opacity: 0;
   font-size: 1.5em;
   margin-right: 2vw;
-  transform: translateY(-50vh);
+  transform: translateY(-100vh);
   transition: transform .5s ease, opacity .2s;
+}
+@mixin arrowL {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 22px 30px;
+  border: 1px solid transparent;
+  transition: .4s;
+  cursor: pointer;
+}
+@mixin arrowR {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 22px 30px;
+  border: 1px solid transparent;
+  transition: .4s;
+  cursor: pointer;
+}
+@mixin backG {
+  background: {
+    color: #e3e3e3;
+    image: url(../images/L.png);
+    repeat: no-repeat;
+    position: bottom left 94px;
+  }
+}
+@mixin footer {
+   background: {
+    color: #e3e3e3;
+    image: url(../images/O.png);
+    repeat: no-repeat;
+  }
+}
+@mixin btnText {
+  display: inline-block;
+  border-color: #000;
+  padding: 10px 20px;
+  width: 50%;
+  margin-right: 5.5%;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+@mixin placeHolder {
+  line-height: 25px;
+  color: #000;
+  font-weight: 400;
+}
+@mixin area {
+  width: 100%;
+  height: 130px;
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 10px 20px;
+  line-height: 25px;
+  resize: none;
+  margin-bottom: 29px;
+}
+@mixin button {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #000;
+  line-height: $lineH;
+  padding: 13px 0;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
 }
