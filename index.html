@@ -6,12 +6,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/app.css">
-  <title>Flex</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  <title>Apollo</title>
 </head>
 <body>
   <header class="ba-header">
     <div class="container">
-      <div class="row"></div>
+      <div class="ba-menu-nav">
+        <div class="ba-menu__item">
+          <a href="#" class="ba-menu__link">MENU</a>
+        </div>
+          <label for="menuOpen" class="ba-menu-btn" arial-label='open menu'>
+            <span class="ba-menu-btn__line"></span>
+            <span class="ba-menu-btn__line"></span>
+            <span class="ba-menu-btn__line"></span>
+          </label>
+        </div>
+        <input type="checkbox" id="menuOpen" class="visually-hidden">
+        <!-- start list fixed menu -->
+        <div class="ba-list">
+          <nav>
+            <ul class="ba-list__menu">
+              <li class="ba-list__item">
+                <a href="#" class="ba-list__link">menu 01</a>
+              </li>
+              <li class="ba-list__item">
+                <a href="#" class="ba-list__link">menu 02</a>
+              </li>
+              <li class="ba-list__item">
+                <a href="#" class="ba-list__link">menu 03</a>
+              </li>
+              <li class="ba-list__item">
+                <a href="#" class="ba-list__link">menu 04</a>
+              </li>
+              <li class="ba-list__item">
+                <a href="#" class="ba-list__link">menu 05</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- end list fixed menu -->
+      <div class="ba-header-info">
+        <div class="ba-info-desc">
+          <h1 class="ba-info__title"><span>Apollo</span>PSD Template</h1>
+          <p class="ba-info__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam soluta corporis est voluptate ipsa necessitatibus?</p>
+        </div>
+        <div class="ba-image">
+          <img src="" alt="Photographer">
+        </div>
+      </div>
     </div>
   </header>
   <main>

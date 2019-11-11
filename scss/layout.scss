@@ -1,15 +1,7 @@
-//variables 
-$container: 1170px;
+$container: 1251px;
 $gap: 15px;
 $col: 12;
 $colWidth: 100% / $col;
-
-$primaryColor: pink;
-$secondaryColor: #4e4e4e;
-
-$btnBorderColor: $primaryColor;
-
-
 * {
   box-sizing: border-box;
 }
@@ -41,8 +33,13 @@ $btnBorderColor: $primaryColor;
   }
 }
 
-//mixins
-@mixin buttonHover {
-  background-color: pink;
-  border-color: darken($btnBorderColor, 15%);
+.visually-hidden {
+  position: absolute;
+  left: -9999999px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
+//mixins

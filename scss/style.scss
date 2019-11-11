@@ -1,18 +1,69 @@
+@import 'layout.scss';
+@import 'vars.scss';
+@import 'mixins.scss';
 
-.box {
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  height: 100%;
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .4s;
 }
-.btn {
-  background: $primaryColor;
-  min-width: 100px;
-  padding: 0 .1em;
+ul, li {
+  list-style: none;
+  text-transform: uppercase;
+  margin-right: 5em;
+    &:last-child {
+      margin-right: 0;
+    }
 
-  &:hover {
-    @include buttonHover;
+}
+body {
+  font-family: $fonts;
+}
+.ba-header {
+  height: 100vh;
+  position: relative;
+  padding: 35px 60px 0 0;
+  background: {
+    color: $bgColor;
+    image: url(../images/A.png),  url(../images/graund.jpg);
+    repeat: no-repeat;
+  }
+  .ba-menu-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__link {
+      @include fondPar;
+      &:hover {
+        opacity: .6;
+      }
+    }
+      // @include menuBtn;
+    .ba-menu-btn {
+      @include burgerBtn;
+      &__line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        }
+    }
+  }
+  .ba-list {
+    @include menuBtn;
+    &__menu {
+      @include baListMenu;
+      &__item {
+        @include baItemMenu;
+        &__link {
+          text-transform: uppercase;
+
+        }
+      }
+    }
+  }
+  #menuOpen:checked ~ .ba-list {
+    transform: translateY(100%);
   }
 }
