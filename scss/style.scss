@@ -152,10 +152,19 @@ body {
       .ba-social {
         display: flex;
         justify-content: space-between;
+
         width: 100%;
         max-width: 200px;
         .ba-social__link {
+
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
           border: 2px solid transparent;
+          background-color: #909090;
           &:hover {
             border-color: #fff;
           }
@@ -233,38 +242,10 @@ body {
   margin-bottom: $margBot;
   @include backG;
   .ba-slider-block {
+    width: 100%;
     display: flex;
-    position: relative;
-    .ba-slider-block__itemOne {
-      border: 3px solid transparent;
-      cursor: pointer;
-      transition: $transit;
-      &:hover {
-        border-color: $bgColor;
-      }
-    }
-    .ba-slider-block__itemTwo {
-      position: relative;
-      right: 20%;
-      bottom: 40px;
-      z-index: 10;
-      border: 3px solid transparent;
-      cursor: pointer;
-      transition: $transit;
-      &:hover {
-        border-color: $bgColor;
-      }
-    }
-    .ba-slider-block__itemThree {
-      position: relative;
-      right: 40%;
-      border: 3px solid transparent;
-      cursor: pointer;
-      transition: $transit;
-      &:hover {
-        border-color: $bgColor;
-      }
-    }
+    justify-content: space-between;
+    align-items: center;
   }
   .ba-arrow-left {
       @include arrowL;
