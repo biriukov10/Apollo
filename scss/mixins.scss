@@ -121,3 +121,7 @@
   font-weight: bold;
   transition: .3s;
 }
+@mixin arrowHov {
+  background-color: transparent;
+  border-color: #fff;
+}

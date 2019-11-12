@@ -192,15 +192,13 @@ body {
     .ba-arrow-left {
       @include arrowL;
       &:hover {
-        background-color: transparent;
-        border-color: #fff;
+        @include arrowHov;
       }
     }
     .ba-arrow-right {
       @include arrowR;
       &:hover {
-        background-color: transparent;
-        border-color: #fff;
+        @include arrowHov; 
       }
     }
 }
@@ -235,9 +233,7 @@ body {
 }
 // ba slide
 .ba-slide {
-  overflow: hidden;
   position: relative;
-  // height: 100vh;
   padding: 25vh 5vw; 
   margin-bottom: $margBot;
   @include backG;
@@ -250,15 +246,13 @@ body {
   .ba-arrow-left {
       @include arrowL;
       &:hover {
-        background-color: transparent;
-        border-color: #fff;
+        @include arrowHov;
       }
     }
     .ba-arrow-right {
       @include arrowR;
       &:hover {
-        background-color: transparent;
-        border-color: #fff;
+        @include arrowHov;
       }
     }
 }
