@@ -8,6 +8,7 @@
 }
 
 @mixin burgerBtn {
+  position: relative;
   width: 21px;
   height: 17px;
   display: flex;

@@ -47,12 +47,32 @@ body {
       // @include menuBtn;
     .ba-menu-btn {
       @include burgerBtn;
-      &__line {
+      .ba-menu-btn__line {
+        position: absolute;
         display: block;
         width: 100%;
         height: 1px;
         background-color: #000;
+        transition: transform .5s;
+      }
+      .ba-menu-btn__line--two {
+          top: 49%;
+          transition: .01s;
         }
+      .ba-menu-btn__line--three {
+        bottom: 0;
+      }
+      &:hover .ba-menu-btn__line--one {
+        transform: rotate(45deg);
+        top: 49%; 
+      }
+      &:hover .ba-menu-btn__line--two {
+        height: 0;
+      }
+      &:hover .ba-menu-btn__line--three {
+        transform: rotate(-45deg);
+        top: 49%; 
+      }
     }
   }
   .ba-list {
